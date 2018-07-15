@@ -1504,7 +1504,7 @@ ngx_http_51D_handler(ngx_http_request_t *r)
 	ngx_slab_pool_t *shpool;
 #endif // FIFTYONEDEGREES_PATTERN
 
-	if (r->main->internal || ngx_http_51D_shm_dataSet == NULL) {
+	if (ngx_http_51D_shm_dataSet == NULL) {
 		return NGX_DECLINED;
 	}
 	r->main->internal = 1;
